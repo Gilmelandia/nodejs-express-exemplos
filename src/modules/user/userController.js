@@ -1,17 +1,15 @@
 import { Router } from "express";
 
-const router = Router()
+import { signup } from "./userService";
 
+const router = Router()
 router.post('/signup', (req, res) => {
-  res.send('SIGNUP /')
+  const answer = signup(req.body)
+  res.send(answer)
 })
 
 router.post('/login', (req, res) => {
   res.send('LOGIN /')
 })
 
-router.get('/test', (req, res) => {
-  res.send('USER TEST /')
-})
-
-export default router 
+export default router
