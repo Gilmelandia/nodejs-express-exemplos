@@ -1,6 +1,6 @@
-import { Router } from "express";
+import { Router } from 'express'
 
-import { signup, login } from "./userService";
+import { signup, login } from './userService'
 
 const AUTH_COOKIE_NAME = 'authorization'
 
@@ -13,7 +13,7 @@ router.post('/signup', (req, res) => {
     if (err.message === 'email_existente')
       return res.status(400).send(err.message)
 
-    res.status(500).send(err.messege)
+    res.status(500).send(err.message)
   } 
 })
 

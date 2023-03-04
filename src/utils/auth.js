@@ -1,8 +1,8 @@
-import { sign, verify } from "jsonwebtoken"
+import { sign, verify } from 'jsonwebtoken'
 
 const AUTH_SECRET = 'secret'
 
-export const generateAccessToken = (data) => sign (data, AUTH_SECRET)
+export const generateAccessToken = (data) => sign(data, AUTH_SECRET)
 
 export const verifyAccessToken = (req, res, next) => {
   try {
